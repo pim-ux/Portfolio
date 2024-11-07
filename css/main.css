@@ -161,7 +161,7 @@ header {
 
 .limited-text {
     display: block;
-    max-width: 90ch; 
+    max-width: 75ch; 
     word-wrap: break-word; 
 }
 

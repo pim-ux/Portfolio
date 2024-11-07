@@ -62,10 +62,8 @@ main {
 
 /* ----SKIPLINK----- */
 .skip-link {
-    position: fixed;
-    /* Fixa o link na tela */
-    top: 0;
-    /* Coloca o link no topo da tela */
+    position: fixed;/* Fixa o link na tela */
+    top: 0;/* Coloca o link no topo da tela */
     left: 0;
     width: 100%;
     height: 44px;
@@ -119,7 +117,6 @@ header {
     margin-bottom: 0 !important;/* Remove o margin-bottom */
 }
 
-
 .contact-info,
 .experience-section {
     max-width: 800px;
@@ -164,8 +161,6 @@ header {
     word-wrap: break-word; 
 }
 
-
-
 .contact-item {
     display: flex;
     align-items: center;
@@ -186,7 +181,6 @@ header {
     text-decoration: underline;
     color: #0c4a75;
 }
-
 
 /* Título e subtítulo */
 .contact-title {
@@ -223,7 +217,6 @@ header {
     font-size: 2rem;
     margin-bottom: 10px;/* Espaço entre o título e o cargo */
 }
-
 
 .contact-location,
 .contact-link {
@@ -262,15 +255,12 @@ header {
     color: #767676;/* Define a cor cinza claro para o span */
 }
 
-
 /* -----SKILLS----- */
 
 .experience-section {
     padding: 40px;
     text-align: left;
 }
-
-
 
 .experience-columns {
     display: flex;
@@ -298,7 +288,6 @@ header {
     line-height: 1.6;
 }
 
-
 /* ------ EDUCATION ------- */
 .experience-list {
     list-style-type: none;  /* Remove os bullets */
@@ -309,7 +298,6 @@ header {
 .contact-info .experience-list {
     margin-top: 40px;  /* Ajuste o valor conforme necessário */
 }
-
 
 /* ------RESPONSIVE MOBILE/TABLE------- */
 @media (max-width: 768px) {
@@ -422,7 +410,7 @@ header {
   }
   
   .tools-list li {
-    margin-right: 16px;
+    margin-right: 8px;
     margin-bottom: 8px;
     white-space: nowrap;
   }

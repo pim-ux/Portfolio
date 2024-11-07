@@ -1,6 +1,9 @@
-document.querySelector('.skip-link').addEventListener('click', function(e) {
+document.querySelector('.skip-link').addEventListener('click', function (e) {
+  // Impede a navegação do link (ao clicar com o mouse) - não queremos isso
+  e.preventDefault();
+  // Adiciona tabindex -1 ao conteúdo principal para que o foco vá para ele
   document.querySelector('#conteudo-principal').setAttribute('tabindex', '-1');
-  document.querySelector('#conteudo-principal').focus();
+  document.querySelector('#conteudo-principal').focus(); // Dá foco ao conteúdo principal
 });
 
 // Função para mostrar/ocultar o botão "Back to Top"

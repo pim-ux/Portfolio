@@ -1,22 +1,22 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const loadingTexts = document.querySelectorAll(".loading-text");
-    let index = 0;
+document.querySelector('.skip-link').addEventListener('click', function(e) {
+  document.querySelector('#conteudo-principal').setAttribute('tabindex', '-1');
+  document.querySelector('#conteudo-principal').focus();
+});
 
-    function showText() {
-      if (index < loadingTexts.length) {
-        loadingTexts[index].classList.add("active");
-        setTimeout(() => {
-          loadingTexts[index].classList.remove("active");
-          index++;
-          showText();
-        }, 1000); // 2 segundos
-      } else {
-        const loadingContainer = document.querySelector(".loading-container");
-        const homepage = document.querySelector(".homepage");
-        loadingContainer.style.display = "none";
-        homepage.style.display = "block";
-      }
-    }
+// Função para mostrar/ocultar o botão "Back to Top"
+function toggleBackToTopButton() {
+  const backToTopButton = document.querySelector('.back-to-top-container');
+  const scrollPosition = window.scrollY || window.pageYOffset;
+  const documentHeight = document.documentElement.scrollHeight;
+  const windowHeight = window.innerHeight;
 
-    showText();
-  });
+  // Verifica se o usuário rolou até o final da página
+  if (scrollPosition + windowHeight >= documentHeight - 10) { // 10px de margem
+      backToTopButton.classList.add('show');
+  } else {
+      backToTopButton.classList.remove('show');
+  }
+}
+
+// Adiciona o evento de scroll para verificar a posição do scroll
+window.addEventListener('scroll', toggleBackToTopButton);

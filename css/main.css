@@ -78,14 +78,12 @@ main {
     transition: opacity 0.3s ease-in-out;/* Adiciona uma transição suave */
 }
 
-.skip-link:focus {
-    opacity: 1;
-    /* Torna o link visível quando em foco */
+.skip-link:focus-visible {
+    opacity: 1; /* Torna o link visível quando em foco pelo teclado */
     background-color: #fd0;
     color: #0b0c0c;
     outline: 3px solid rgba(0, 0, 0, 0);
     box-shadow: 0 -2px 4px #fd0, 0 4px 6px #0b0c0c;
-    text-decoration: none;
 }
 
 /* ----HEADER---- */

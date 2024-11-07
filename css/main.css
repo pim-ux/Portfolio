@@ -248,7 +248,7 @@ header {
 
 .job-duration {
     margin-top: 0;/* Remove margem superior do span */
-    color: rgba(155, 155, 155, 1);/* Define a cor cinza claro para o span */
+    color: #767676;/* Define a cor cinza claro para o span */
 }
 
 

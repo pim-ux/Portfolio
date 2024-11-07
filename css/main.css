@@ -34,6 +34,13 @@ body {
     padding: 0;
 }
 
+span {
+    display: block;
+    max-width: 90ch; 
+    word-wrap: break-word; 
+}
+
+
 /* Foco nos links */
 a {
     text-decoration: underline;
@@ -149,9 +156,15 @@ header {
     align-items: flex-start;
 }
 
+/* ----BIO---- */
+
 .bio-section {
     text-align: left;
 }
+
+.focused-heading {
+    margin-top: 40px; /* Ajuste o valor conforme necessário */
+  }
 
 
 

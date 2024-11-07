@@ -34,13 +34,6 @@ body {
     padding: 0;
 }
 
-span {
-    display: block;
-    max-width: 90ch; 
-    word-wrap: break-word; 
-}
-
-
 /* Foco nos links */
 a {
     text-decoration: underline;
@@ -165,6 +158,12 @@ header {
 .focused-heading {
     margin-top: 40px; /* Ajuste o valor conforme necessário */
   }
+
+.limited-text {
+    display: block;
+    max-width: 90ch; 
+    word-wrap: break-word; 
+}
 
 
 

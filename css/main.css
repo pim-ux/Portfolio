@@ -17,6 +17,7 @@ h1 {
 
 ul li {
     margin-bottom: 16px;
+     max-width: 60ch; 
 }
 
 ul {

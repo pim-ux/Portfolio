@@ -62,8 +62,8 @@ main {
 
 /* ----SKIPLINK----- */
 .skip-link {
-    position: fixed;/* Fixa o link na tela */
-    top: 0;/* Coloca o link no topo da tela */
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
     height: 44px;
@@ -72,18 +72,26 @@ main {
     text-align: center;
     line-height: 44px;
     font-size: 18px;
-    z-index: 9999;/* Assegura que o skiplink esteja acima do header fixo */
+    z-index: 9999;
     text-decoration: none;
-    opacity: 0;/* Torna o link invisível inicialmente */
-    transition: opacity 0.3s ease-in-out;/* Adiciona uma transição suave */
+    opacity: 0; /* Invisível inicialmente */
+    pointer-events: none; /* Desabilita a interação com o mouse */
+    transition: opacity 0.3s ease-in-out;
 }
 
+/* Torna o link visível quando em foco pelo teclado */
 .skip-link:focus-visible {
-    opacity: 1; /* Torna o link visível quando em foco pelo teclado */
+    opacity: 1; /* Torna o link visível ao focar com o teclado */
     background-color: #fd0;
     color: #0b0c0c;
     outline: 3px solid rgba(0, 0, 0, 0);
     box-shadow: 0 -2px 4px #fd0, 0 4px 6px #0b0c0c;
+    pointer-events: auto; /* Habilita interação com o teclado quando visível */
+}
+
+/* Desabilita a interação com o mouse enquanto não estiver em foco via teclado */
+.skip-link:not(:focus-visible) {
+    opacity: 0;
 }
 
 /* ----HEADER---- */

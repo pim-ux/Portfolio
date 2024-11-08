@@ -266,7 +266,7 @@ header {
 }
 
 
-/* Ataraxia */
+/* EXPERIENCE */
 
 /* Para garantir que o conteúdo do trabalho (job-experience) se ajuste corretamente */
 .job-experience {
@@ -302,7 +302,6 @@ header {
     word-break: break-word;
 }
 
-/* Responsividade para telas pequenas */
 @media (max-width: 768px) {
     .job-experience {
         padding: 0 15px; /* Adiciona padding nas laterais para não encostar nas bordas */
@@ -321,11 +320,6 @@ header {
     .job-duration {
         font-size: 1rem; /* Ajusta o tamanho da fonte da duração em dispositivos móveis */
     }
-}
-
-/* Para as sublistas, garantir que elas também não ultrapassem os limites */
-.job-experience ul ul {
-    padding-left: 20px; /* Sublistas têm uma indentação */
 }
 
 .job-experience ul li {

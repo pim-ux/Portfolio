@@ -37,7 +37,9 @@ body {
 
 /* Foco nos links */
 a {
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 2px solid #1d70b8; 
+    padding-bottom: 1px;
 }
 
 a:focus,
@@ -445,6 +447,7 @@ header {
     color: #0c4a75;
     text-decoration: underline;
     transform: translateY(-3px); /* Levanta o botão quando passa o mouse */
+    
 }
 
 .back-to-top-link svg {

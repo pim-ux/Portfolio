@@ -116,6 +116,27 @@ header {
     margin-left: 10px;
 }
 
+/* ----ICONS TITLES---- */
+.bio-section {
+    text-align: left;
+}
+
+.bio-header {
+    display: flex;
+    align-items: center; /* Alinha o ícone e o h2 verticalmente no centro */
+    gap: 10px; /* Espaçamento entre o ícone e o h2 */
+}
+
+.bio-header h2 {
+    font-size: 2rem;
+    margin: 0; /* Remove margem padrão do h2 */
+}
+
+.bio-header svg {
+    width: 32px;
+    height: 32px;
+}
+
 /* ----CONTACT INFO---- */
 
 .contact-details>ul {

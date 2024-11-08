@@ -1,29 +1,22 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos globais */
-body {
-    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Estilos de título */
-h1, h2, h3 {
-    color: #333;
-}
-
 h1 {
+    color: #333;
     font-size: 3rem;
 }
 
-h2, h3 {
-    margin: 0; /* Remover margens adicionais */
+h2,
+h3 {
+    color: #333;
+}
+
+ul li {
+    margin-bottom: 16px;
+     max-width: 60ch; 
 }
 
 ul {
@@ -32,12 +25,16 @@ ul {
     margin-bottom: 20px;
 }
 
-ul li {
-    margin-bottom: 16px;
-    max-width: 60ch;
+body {
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-/* Links */
+/* Foco nos links */
 a {
     text-decoration: none;
     border-bottom: 2px solid #1d70b8; 
@@ -48,21 +45,22 @@ a:focus,
 a:active {
     background-color: #fd0;
     color: #0b0c0c;
-    outline: 3px solid;
+    outline: 3px solid
 }
 
 main {
-    padding-bottom: 80px;
+    padding-bottom: 80px;/* Espaço extra para o link não se sobrepor ao conteúdo */
 }
 
 /* Layout do main */
 .layout {
     max-width: 100%;
     margin: 40px auto;
-    padding: 120px 20px 20px;
+    padding: 20px;
+    padding-top: 120px;
 }
 
-/* Skip link */
+/* ----SKIPLINK----- */
 .skip-link {
     position: fixed;
     top: 0;
@@ -75,55 +73,64 @@ main {
     line-height: 44px;
     font-size: 18px;
     z-index: 9999;
-    opacity: 0;
-    pointer-events: none;
+    text-decoration: none;
+    opacity: 0; /* Invisível inicialmente */
+    pointer-events: none; /* Desabilita a interação com o mouse */
     transition: opacity 0.3s ease-in-out;
 }
 
+/* Torna o link visível quando em foco pelo teclado */
 .skip-link:focus-visible {
-    opacity: 1;
+    opacity: 1; /* Torna o link visível ao focar com o teclado */
     background-color: #fd0;
     color: #0b0c0c;
+    outline: 3px solid rgba(0, 0, 0, 0);
     box-shadow: 0 -2px 4px #fd0, 0 4px 6px #0b0c0c;
-    pointer-events: auto;
+    pointer-events: auto; /* Habilita interação com o teclado quando visível */
 }
 
-/* Header */
+/* Desabilita a interação com o mouse enquanto não estiver em foco via teclado */
+.skip-link:not(:focus-visible) {
+    opacity: 0;
+}
+
+/* ----HEADER---- */
 header {
-    position: fixed;
-    top: 0;
+    position: fixed;/* Faz o header ficar fixo */
+    top: 0;/* Garante que o header fique no topo */
     left: 0;
-    width: 100%;
-    background-color: #333;
+    width: 100%;/* O header vai ocupar toda a largura da tela */
+    background-color: #333;/* Cor de fundo */
     color: white;
-    padding: 20px 50px;
+    padding: 20px 0;
+    z-index: 1000;/* Garante que o header fique sobre outros conteúdos */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
+    justify-content: space-between;/* Adapta o conteúdo no header */
+    padding-left: 50px;/* Ajuste do espaço interno */
 }
 
-/* Profile */
 .profile-name {
     font-size: 1rem;
     color: #fff;
     margin-left: 10px;
 }
 
-/* Bio Section */
+/* ----ICONS TITLES---- */
 .bio-section {
     text-align: left;
 }
 
 .bio-header {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    align-items: center; /* Alinha o ícone e o h2 verticalmente no centro */
+    gap: 10px; /* Espaçamento entre o ícone e o h2 */
+    margin-bottom: 20px;  /* Adiciona espaço abaixo do ícone+título */
 }
 
 .bio-header h2 {
     font-size: 2rem;
+    margin: 0; /* Remove margem padrão do h2 */
 }
 
 .bio-header svg {
@@ -131,37 +138,54 @@ header {
     height: 32px;
 }
 
-.focused-heading {
-    margin-top: 40px; /* Ajuste o valor conforme necessário */
-  }
+/* ----CONTACT INFO---- */
 
-/* Contact Info */
+.contact-details>ul {
+    margin-left: 0 !important;/* Remove o margin-left */
+    margin-bottom: 0 !important;/* Remove o margin-bottom */
+}
+
 .contact-info,
 .experience-section {
     max-width: 800px;
     margin: 40px auto;
-    padding: 0 40px;
+    padding: 0px 40px 0px 40px;
 }
 
 .contact-info img {
-    width: 124px;
+    width: 124px;/* Tamanho fixo de 124px */
     height: 124px;
-    object-fit: cover;
+    object-fit: cover; /* Faz a imagem preencher o espaço mantendo a proporção */
 }
 
 .contact-info h1 {
     margin-bottom: 5px;
 }
 
-.contact-role {
-    margin-top: 0;
+.contact-info .contact-role {
+    margin-top: 0;/* Remove qualquer margem superior que possa estar presente */
 }
 
-/* Contact Details */
-.contact-details {
+.contact-details-section {
     display: flex;
-    gap: 100px;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ----BIO---- */
+
+.bio-section {
+    text-align: left;
+}
+
+.focused-heading {
+    margin-top: 40px; /* Ajuste o valor conforme necessário */
+  }
+
+.limited-text {
+    display: block;
+    max-width: 70ch; 
+    word-wrap: break-word; 
 }
 
 .contact-item {
@@ -183,74 +207,191 @@ header {
     color: #0c4a75;
 }
 
-/* Job Experience */
+.contact-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-role {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: normal;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+/* Detalhes de contato em 2 colunas */
+.contact-details {
+    display: flex;
+    justify-content: flex-start;/* Alinha as colunas à esquerda */
+    gap: 100px;/* Espaçamento entre as colunas */
+}
+
+.contact-item {
+    display: flex;/* Faz com que os span fiquem na mesma linha */
+    align-items: center;/* Alinha verticalmente no centro */
+    gap: 10px;/* Espaçamento entre os elementos span */
+}
+
+.contact-header {
+    margin-bottom: 20px;/* Espaçamento entre o grupo (título + cargo) e os elementos abaixo */
+}
+
+.contact-title {
+    font-size: 2rem;
+    margin-bottom: 10px;/* Espaço entre o título e o cargo */
+}
+
+.contact-location,
+.contact-link {
+    font-size: 1rem;/* Ajusta o tamanho do texto se necessário */
+}
+
+.contact-label {
+    font-weight: bold;
+}
+
+.contact-link {
+    color: #1d70b8;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: #0c4a75;
+}
+
+/* EXPERIENCE */
+
 .job-experience {
     margin-bottom: 50px;
     word-wrap: break-word;
+    max-width: 100%;
 }
 
+/* Para as listas de experiência, manter as margens e padding padrão */
 .job-experience ul {
-    margin-top: 25px;
     margin-bottom: 50px;
+    margin-top: 25px;
     list-style-type: disc;
 }
 
+/* Ajustes no título da vaga e a duração */
 .job-header {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Muda para empilhar o título e a duração na versão mobile */
+    gap: 10px; /* Espaçamento entre o título e a duração */
 }
 
 .job-title {
     font-size: 1.5rem;
+    word-wrap: break-word;
 }
 
 .job-duration {
     font-size: 1rem;
     color: #767676;
+    margin-top: 0;
+    word-break: break-word;
 }
 
 @media (max-width: 768px) {
     .job-experience {
-        padding: 0 16px;
+        padding: 0 15px; /* Adiciona padding nas laterais para não encostar nas bordas */
     }
 
+    /* Quando a tela for pequena, empilhar título e duração, e ajustando o tamanho da fonte */
     .job-header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Empilha o título e a duração */
+        align-items: flex-start; /* Garante que fiquem alinhados à esquerda */
     }
 
     .job-title {
-        font-size: 1.25rem;
+        font-size: 1.25rem; /* Ajuste do tamanho da fonte em dispositivos móveis */
     }
 
     .job-duration {
-        font-size: 1rem;
+        font-size: 1rem; /* Ajusta o tamanho da fonte da duração em dispositivos móveis */
     }
+}
 
+.job-experience ul li {
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* -----SKILLS----- */
+
+.experience-section {
+    padding: 0 40px 0 40px;
+    text-align: left;
+}
+
+.experience-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Isso permite que as colunas se reorganizem quando o espaço for insuficiente */
+}
+
+.experience-column {
+    flex: 1;
+}
+
+.experience-item {
+    margin-bottom: 20px;/* Espaçamento entre os itens de habilidade */
+}
+
+.experience-item h4 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ------ EDUCATION ------- */
+.experience-list {
+    list-style-type: none;  /* Remove os bullets */
+    padding: 0;             /* Remove o padding, caso haja algum espaço */
+    margin: 0;              /* Remove a margem, se necessário */
+}
+
+.contact-info .experience-list {
+    margin-top: 25px;  /* Ajuste o valor conforme necessário */
+}
+
+/* ------RESPONSIVE MOBILE/TABLE------- */
+@media (max-width: 768px) {
     .contact-details {
-        flex-direction: column;
+        flex-direction: column;/* Coloca as colunas em uma coluna quando a tela for pequena */
         gap: 20px;
     }
 
     .experience-columns {
-        flex-direction: column;
+        flex-direction: column;/* Empilha as colunas verticalmente em telas menores */
     }
 
     .experience-column {
         flex: 1 1 100%;
     }
-
-    .contact-info,
-    .experience-section {
-        padding: 0 16px;
-    }
 }
 
 @media (max-width: 480px) {
-    .contact-info,
-    .experience-section {
-        padding: 0 16px;
+    .contact-details > ul {
+        margin-left: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .contact-item {
+        text-align: left;
+    }
+
+    .contact-item a {
+        display: block;
+        margin-top: 5px;
     }
 
     .back-to-top-container {
@@ -260,13 +401,36 @@ header {
     .back-to-top-link {
         font-size: 16px;
     }
+}
 
-    .contact-details > ul {
-        margin-left: 0 !important;
+@media (max-width: 768px) {
+    .contact-info,
+    .experience-section {
+        padding: 0px 20px; /* Reduz o padding lateral para 20px em telas menores */
     }
 }
 
-/* Back to top */
+@media (max-width: 480px) {
+    .contact-info,
+    .experience-section {
+        padding: 0px 16px; /* Reduz ainda mais o padding lateral para 10px em telas muito pequenas */
+    }
+}
+
+    .contact-info,
+    .experience-section {
+        padding: 0 30px; /* Ajuste para 30px nas laterais em telas menores que 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info,
+    .experience-section {
+        padding: 0 16px; /* Ajuste para 15px nas laterais em telas menores que 480px */
+    }
+}
+
+    /* -----BACK TO TOP------- */
 .back-to-top-container {
     position: fixed;
     bottom: 40px;
@@ -274,9 +438,9 @@ header {
     transform: translateX(-50%);
     padding: 10px;
     text-align: center;
-    opacity: 0;
+    opacity: 0; /* Inicialmente invisível */
     transition: opacity 0.3s ease-in-out;
-    visibility: hidden;
+    visibility: hidden; /* Esconde o botão inicialmente */
 }
 
 .back-to-top-container.show {
@@ -285,25 +449,25 @@ header {
 }
 
 .back-to-top-link {
-    color: #1d70b8;
-    font-size: 18px;
+    color: #1d70b8; /* Cor do link */
+    font-size: 18px; /* Tamanho maior da fonte */
     font-weight: normal;
     transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-flex;
-    align-items: center;
+    display: inline-flex; /* Flexbox para alinhar o texto e a seta */
+    align-items: center; /* Centraliza a seta verticalmente */
 }
 
 .back-to-top-link:hover,
 .back-to-top-link:focus {
     color: #0c4a75;
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* Levanta o botão quando passa o mouse */
 }
 
 .back-to-top-link svg {
-    margin-right: 8px;
-    fill: currentColor;
-    width: 24px;
-    height: 24px;
+    margin-right: 8px; /* Espaçamento entre a seta e o texto */
+    fill: currentColor; /* A cor do SVG será a mesma do texto */
+    width: 24px; /* Tamanho maior da seta */
+    height: 24px; /* Tamanho maior da seta */
 }
 
 #topo {
@@ -311,43 +475,45 @@ header {
     height: 1px;
 }
 
-/* Icons */
-.icon {
-    margin-right: 12px;
-}
+/* ----- ICONS ------- */
+    .icon {
+        margin-right: 12px;
+        /* Espaço entre o ícone e o texto */
+    }
 
-.icon svg {
-    width: 32px;
-    height: 32px;
-    fill: #fd0;
-    stroke: #fd0;
-}
+    .icon svg {
+        width: 32px;/* Tamanho do ícone */
+        height: 32px;/* Tamanho do ícone */
+        fill: #fd0;/* Cor amarela para os ícones */
+        stroke: #fd0;/* Borda amarela */
+    }
 
-/* Skills */
+/* SKILLS - LISTAS */
 .experience-columns {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.experience-column {
-    flex: 1 1 calc(50% - 20px);
-    margin-bottom: 20px;
-}
-
-.tools-list {
-    list-style-type: none;
+    display: flex; /* Ativa o layout flex */
+    flex-wrap: wrap; /* Permite que as colunas quebrem para a linha seguinte, se necessário */
+    gap: 20px; /* Espaço entre as colunas */
+  }
+  
+  .experience-column {
+    flex: 1 1 calc(50% - 20px); /* Garante que cada coluna ocupe metade do espaço, com um gap de 20px entre elas */
+    margin-bottom: 20px; /* Espaço entre as seções de conteúdo */
+  }
+  
+  .tools-list {
+    list-style-type: none; /* Remove os bullets */
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.tools-list li {
+    flex-wrap: wrap; /* Permite que os itens se ajustem à linha */
+  }
+  
+  .tools-list li {
     margin-right: 8px;
     margin-bottom: 8px;
     white-space: nowrap;
-}
+  }
+
 
   
   

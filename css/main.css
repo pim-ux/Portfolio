@@ -49,8 +49,7 @@ a:active {
 }
 
 main {
-    padding-bottom: 80px;
-    /* Espaço extra para o link não se sobrepor ao conteúdo */
+    padding-bottom: 80px;/* Espaço extra para o link não se sobrepor ao conteúdo */
 }
 
 /* Layout do main */
@@ -58,6 +57,7 @@ main {
     max-width: 100%;
     margin: 40px auto;
     padding: 20px;
+    padding-top: 120px;
 }
 
 /* ----SKIPLINK----- */

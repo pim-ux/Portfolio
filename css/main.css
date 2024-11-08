@@ -208,7 +208,6 @@ header {
     color: #0c4a75;
 }
 
-/* Título e subtítulo */
 .contact-title {
     font-size: 2rem;
     margin-bottom: 10px;
@@ -262,10 +261,8 @@ header {
     color: #0c4a75;
 }
 
-
 /* EXPERIENCE */
 
-/* Para garantir que o conteúdo do trabalho (job-experience) se ajuste corretamente */
 .job-experience {
     margin-bottom: 50px;
     word-wrap: break-word;
@@ -323,8 +320,6 @@ header {
     max-width: 100%;
 }
 
-
-
 /* -----SKILLS----- */
 
 .experience-section {
@@ -376,7 +371,6 @@ header {
         gap: 20px;
     }
 
-    /* Ajuste das colunas da seção de experiência */
     .experience-columns {
         flex-direction: column;/* Empilha as colunas verticalmente em telas menores */
     }
@@ -441,7 +435,6 @@ header {
 .back-to-top-link:focus {
     color: #0c4a75;
     transform: translateY(-3px); /* Levanta o botão quando passa o mouse */
-    
 }
 
 .back-to-top-link svg {

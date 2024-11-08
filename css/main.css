@@ -403,6 +403,20 @@ header {
     }
 }
 
+@media (max-width: 768px) {
+    .contact-info,
+    .experience-section {
+        padding: 0px 20px; /* Reduz o padding lateral para 20px em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info,
+    .experience-section {
+        padding: 0px 10px; /* Reduz ainda mais o padding lateral para 10px em telas muito pequenas */
+    }
+}
+
     /* -----BACK TO TOP------- */
 .back-to-top-container {
     position: fixed;

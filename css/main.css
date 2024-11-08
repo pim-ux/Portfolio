@@ -413,7 +413,20 @@ header {
 @media (max-width: 480px) {
     .contact-info,
     .experience-section {
-        padding: 0px 10px; /* Reduz ainda mais o padding lateral para 10px em telas muito pequenas */
+        padding: 0px 16px; /* Reduz ainda mais o padding lateral para 10px em telas muito pequenas */
+    }
+}
+
+    .contact-info,
+    .experience-section {
+        padding: 0 30px; /* Ajuste para 30px nas laterais em telas menores que 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info,
+    .experience-section {
+        padding: 0 16px; /* Ajuste para 15px nas laterais em telas menores que 480px */
     }
 }
 

@@ -347,42 +347,52 @@ header {
 }
 
     /* -----BACK TO TOP------- */
-    .back-to-top-container {
-        position: fixed;
-        bottom: 40px;
-        left: 50%;/* Posiciona o link no meio */
-        transform: translateX(-50%);
-        padding: 10px;
-        text-align: center;
-        opacity: 0;  /* Inicialmente invisível */
-        transition: opacity 0.3s ease-in-out;
-        visibility: hidden; /* Esconde o botão */
-    }
+.back-to-top-container {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    text-align: center;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease-in-out;
+    visibility: hidden; /* Esconde o botão inicialmente */
+}
 
-    .back-to-top-container.show {
-        opacity: 1; /* Torna visível quando a classe show é adicionada */
-        visibility: visible; /* Faz o botão aparecer */
-    }
+.back-to-top-container.show {
+    opacity: 1;
+    visibility: visible;
+}
 
-    .back-to-top-link {
-        color: #1d70b8;/* Cor do link */
-        font-size: 16px;
-        font-weight: normal;
-        transition: color 0.3s ease;
-    }
+.back-to-top-link {
+    color: #1d70b8; /* Cor do link */
+    font-size: 18px; /* Tamanho maior da fonte */
+    font-weight: normal;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-flex; /* Flexbox para alinhar o texto e a seta */
+    align-items: center; /* Centraliza a seta verticalmente */
+}
 
-    .back-to-top-link:hover,
-    .back-to-top-link:focus {
-        color: #0c4a75;
-        text-decoration: underline;
-    }
+.back-to-top-link:hover,
+.back-to-top-link:focus {
+    color: #0c4a75;
+    text-decoration: underline;
+    transform: translateY(-3px); /* Levanta o botão quando passa o mouse */
+}
 
-    #topo {
-        display: block;
-        height: 1px;
-    }
+.back-to-top-link svg {
+    margin-right: 8px; /* Espaçamento entre a seta e o texto */
+    fill: currentColor; /* A cor do SVG será a mesma do texto */
+    width: 24px; /* Tamanho maior da seta */
+    height: 24px; /* Tamanho maior da seta */
+}
 
+#topo {
+    display: block;
+    height: 1px;
+}
 
+/* ----- ICONS ------- */
     .icon {
         margin-right: 12px;
         /* Espaço entre o ícone e o texto */

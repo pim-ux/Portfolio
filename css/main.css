@@ -206,7 +206,6 @@ header {
 
 .contact-link:hover,
 .contact-link:focus {
-    text-decoration: underline;
     color: #0c4a75;
 }
 
@@ -444,7 +443,6 @@ header {
 .back-to-top-link:hover,
 .back-to-top-link:focus {
     color: #0c4a75;
-    text-decoration: underline;
     transform: translateY(-3px); /* Levanta o botão quando passa o mouse */
     
 }

@@ -266,21 +266,74 @@ header {
 }
 
 
-/* Aumentar o espaço abaixo da lista (ul) */
-.job-experience ul {
-    margin-bottom: 50px;/* Aumenta o espaço abaixo da lista */
-    margin-top: 25px;/* Aumenta o espaço abaixo da lista */
+/* Ataraxia */
+
+/* Para garantir que o conteúdo do trabalho (job-experience) se ajuste corretamente */
+.job-experience {
+    margin-bottom: 50px;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
-/* Aumentar o espaçamento entre artigos (job-experience) */
-.job-experience {
-    margin-bottom: 50px;/* Aumenta o espaçamento entre os artigos */
+/* Para as listas de experiência, manter as margens e padding padrão */
+.job-experience ul {
+    margin-bottom: 50px;
+    margin-top: 25px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Ajustes no título da vaga e a duração */
+.job-header {
+    display: flex;
+    flex-direction: column; /* Muda para empilhar o título e a duração na versão mobile */
+    gap: 10px; /* Espaçamento entre o título e a duração */
+}
+
+.job-title {
+    font-size: 1.5rem;
+    word-wrap: break-word;
 }
 
 .job-duration {
-    margin-top: 0;/* Remove margem superior do span */
-    color: #767676;/* Define a cor cinza claro para o span */
+    font-size: 1rem;
+    color: #767676;
+    margin-top: 0;
+    word-break: break-word;
 }
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .job-experience {
+        padding: 0 15px; /* Adiciona padding nas laterais para não encostar nas bordas */
+    }
+
+    /* Quando a tela for pequena, empilhar título e duração, e ajustando o tamanho da fonte */
+    .job-header {
+        flex-direction: column; /* Empilha o título e a duração */
+        align-items: flex-start; /* Garante que fiquem alinhados à esquerda */
+    }
+
+    .job-title {
+        font-size: 1.25rem; /* Ajuste do tamanho da fonte em dispositivos móveis */
+    }
+
+    .job-duration {
+        font-size: 1rem; /* Ajusta o tamanho da fonte da duração em dispositivos móveis */
+    }
+}
+
+/* Para as sublistas, garantir que elas também não ultrapassem os limites */
+.job-experience ul ul {
+    padding-left: 20px; /* Sublistas têm uma indentação */
+}
+
+.job-experience ul li {
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+
 
 /* -----SKILLS----- */
 

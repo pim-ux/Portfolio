@@ -9,13 +9,7 @@ h1 {
     font-size: 3rem;
 }
 
-h2,
-h3 {
-    color: #333;
-    font-size: 1.5rem;
-}
-
-h2,{
+h2, h3{
     color: #333;
 }
 
@@ -135,7 +129,7 @@ header {
 }
 
 .bio-header h2 {
-    font-size: 2rem;
+    font-size: 1.25rem;
     margin: 0; /* Remove margem padrão do h2 */
 }
 

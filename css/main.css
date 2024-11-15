@@ -96,7 +96,7 @@ main {
 
 /* ----HEADER---- */
 header {
-    position: sticky;
+    position: relative;
     top: 0;/* Garante que o header fique no topo */
     left: 0;
     width: 100%;/* O header vai ocupar toda a largura da tela */

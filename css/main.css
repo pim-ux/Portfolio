@@ -52,6 +52,16 @@ main {
     padding-bottom: 80px;/* Espaço extra para o link não se sobrepor ao conteúdo */
 }
 
+.last-updated {
+  font-size: 1rem;
+  color: #666;
+  text-align: right;
+  padding: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
 /* Layout do main */
 .layout {
     max-width: 100%;

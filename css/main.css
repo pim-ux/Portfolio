@@ -55,7 +55,7 @@ main {
 /* Layout do main */
 .layout {
     max-width: 100%;
-    margin: 40px auto;
+    margin: 0px auto;
     padding: 20px;
 }
 

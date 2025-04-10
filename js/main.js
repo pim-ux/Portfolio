@@ -1,11 +1,3 @@
-document.querySelector('.skip-link').addEventListener('click', function (e) {
-  // Impede a navegação do link (ao clicar com o mouse) - não queremos isso
-  e.preventDefault();
-  // Adiciona tabindex -1 ao conteúdo principal para que o foco vá para ele
-  document.querySelector('#conteudo-principal').setAttribute('tabindex', '-1');
-  document.querySelector('#conteudo-principal').focus(); // Dá foco ao conteúdo principal
-});
-
 // Função para mostrar/ocultar o botão "Back to Top"
 function toggleBackToTopButton() {
   const backToTopButton = document.querySelector('.back-to-top-container');
@@ -21,5 +13,28 @@ function toggleBackToTopButton() {
   }
 }
 
+// Função que adiciona o foco ao conteúdo principal ao clicar no "Back to Top"
+document.querySelector('.back-to-top-link').addEventListener('click', function (e) {
+  e.preventDefault(); // Impede a navegação padrão do link
+  
+  // Foca no conteúdo principal
+  document.querySelector('#conteudo-principal').focus();
+});
+
+// Exibe ou oculta o botão "Back to Top" com base na rolagem
+window.addEventListener('scroll', () => {
+  const backToTopContainer = document.getElementById('backToTopContainer');
+  const backToTopLink = document.getElementById('backToTopLink');
+
+  if (window.scrollY > 300) {
+    backToTopContainer.classList.add('show');
+    backToTopLink.setAttribute('tabindex', '0'); // Torna o link "Back to Top" acessível por teclado
+  } else {
+    backToTopContainer.classList.remove('show');
+    backToTopLink.setAttribute('tabindex', '-1'); // Remove o foco do link
+  }
+});
+
 // Adiciona o evento de scroll para verificar a posição do scroll
 window.addEventListener('scroll', toggleBackToTopButton);
+

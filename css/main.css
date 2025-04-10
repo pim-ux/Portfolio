@@ -438,6 +438,7 @@ header {
 }
 
     /* -----BACK TO TOP------- */
+/* -----BACK TO TOP------- */
 .back-to-top-container {
     position: fixed;
     bottom: 40px;
@@ -448,11 +449,12 @@ header {
     opacity: 0; /* Inicialmente invisível */
     transition: opacity 0.3s ease-in-out;
     visibility: hidden; /* Esconde o botão inicialmente */
+    z-index: 9999; /* Garante que o botão fique sobre outros conteúdos */
 }
 
 .back-to-top-container.show {
     opacity: 1;
-    visibility: visible;
+    visibility: visible; /* Torna o botão visível */
 }
 
 .back-to-top-link {
@@ -481,6 +483,20 @@ header {
     display: block;
     height: 1px;
 }
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .back-to-top-container {
+        bottom: 20px; /* Ajusta a posição do botão em telas menores */
+    }
+
+    .back-to-top-link {
+        font-size: 16px; /* Ajusta o tamanho da fonte do link para telas menores */
+    }
+}
+
+
+
 
 /* ----- ICONS ------- */
     .icon {

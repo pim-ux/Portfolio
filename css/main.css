@@ -63,13 +63,13 @@ main {
 .last-updated {
   font-size: 1rem;
   color: #666;
-  text-align: right;
-  padding: 0 16px;
+  text-align: right;  /* Garantir que o texto seja alinhado à direita */
   margin: 1rem 0 2rem 0;
-  display: inline-block; /* Adicionando inline-block para o alinhamento correto */
   width: 100%;
+  padding: 0 16px;
   box-sizing: border-box;
 }
+
 
 /* ----SKIPLINK----- */
 .skip-link {

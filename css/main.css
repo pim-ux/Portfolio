@@ -1,3 +1,7 @@
+html {
+  font-size: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -81,7 +85,7 @@ main {
     color: #000;
     text-align: center;
     line-height: 44px;
-    font-size: 18px;
+    font-size: 1.125rem;
     z-index: 9999;
     text-decoration: none;
     opacity: 0; /* Invisível inicialmente */
@@ -353,7 +357,7 @@ header {
 }
 
 .experience-item h4 {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 5px;
 }

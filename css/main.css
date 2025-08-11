@@ -125,10 +125,47 @@ header {
     margin-left: 0.625rem;
 }
 
-.contact-details>ul {
-    margin-left: 0 !important;
-    margin-bottom: 0 !important;
+/* Torna o dl semelhante a ul visualmente */
+.contact-list {
+  margin-left: 0 !important;
+  margin-bottom: 0 !important;
 }
+
+/* Estiliza cada par dt/dd como os antigos li */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item dt {
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.contact-item dd {
+  margin: 0;
+}
+
+.contact-location,
+.contact-link {
+  font-size: 1rem;
+}
+
+.contact-link {
+    color: #1d70b8;
+    text-decoration: underline;
+    text-decoration-skip: none;
+    text-decoration-thickness: 2px;
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    text-decoration: underline;
+    color: #0c4a75;
+}
+
 
 .contact-info,
 .experience-section {

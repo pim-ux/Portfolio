@@ -53,7 +53,7 @@ a:active {
 }
 
 main {
-    padding-bottom: 80px;/* Espaço extra para o link não se sobrepor ao conteúdo */
+    padding-bottom: 80px;
 }
 
 /* Layout do main */
@@ -135,14 +135,14 @@ header {
 
 .bio-header {
     display: flex;
-    align-items: center; /* Alinha o ícone e o h2 verticalmente no centro */
-    gap: 10px; /* Espaçamento entre o ícone e o h2 */
-    margin-bottom: 20px;  /* Adiciona espaço abaixo do ícone+título */
+    align-items: center; 
+    gap: 10px; 
+    margin-bottom: 20px;  
 }
 
 .bio-header h2 {
     font-size: 1.25rem;
-    margin: 0; /* Remove margem padrão do h2 */
+    margin: 0; 
 }
 
 .bio-header svg {
@@ -153,9 +153,8 @@ header {
 /* ----CONTACT INFO---- */
 
 .contact-details>ul {
-    margin-left: 0 !important;/* Remove o margin-left */
-    margin-bottom: 0 !important;/* Remove o margin-bottom */
-}
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
 
 .contact-info,
 .experience-section {
@@ -167,7 +166,7 @@ header {
 .contact-info img {
     width: 124px;/* Tamanho fixo de 124px */
     height: 124px;
-    object-fit: cover; /* Faz a imagem preencher o espaço mantendo a proporção */
+    object-fit: cover; 
 }
 
 .contact-info h1 {
@@ -175,7 +174,8 @@ header {
 }
 
 .contact-info .contact-role {
-    margin-top: 0;/* Remove qualquer margem superior que possa estar presente */
+    margin-top: 0;
+  
 }
 
 .contact-details-section {
@@ -252,12 +252,12 @@ header {
 
 .contact-title {
     font-size: 2rem;
-    margin-bottom: 10px;/* Espaço entre o título e o cargo */
+    margin-bottom: 10px;
 }
 
 .contact-location,
 .contact-link {
-    font-size: 1rem;/* Ajusta o tamanho do texto se necessário */
+    font-size: 1rem;
 }
 
 .contact-label {
@@ -291,8 +291,8 @@ header {
 /* Ajustes no título da vaga e a duração */
 .job-header {
     display: flex;
-    flex-direction: column; /* Muda para empilhar o título e a duração na versão mobile */
-    gap: 10px; /* Espaçamento entre o título e a duração */
+    flex-direction: column; 
+    gap: 10px; 
 }
 
 .job-title {
@@ -309,21 +309,20 @@ header {
 
 @media (max-width: 768px) {
     .job-experience {
-        padding: 0 15px; /* Adiciona padding nas laterais para não encostar nas bordas */
+        padding: 0 15px; 
     }
 
-    /* Quando a tela for pequena, empilhar título e duração, e ajustando o tamanho da fonte */
     .job-header {
-        flex-direction: column; /* Empilha o título e a duração */
-        align-items: flex-start; /* Garante que fiquem alinhados à esquerda */
+        flex-direction: column; 
+        align-items: flex-start; 
     }
 
     .job-title {
-        font-size: 1.25rem; /* Ajuste do tamanho da fonte em dispositivos móveis */
+        font-size: 1.25rem; 
     }
 
     .job-duration {
-        font-size: 1rem; /* Ajusta o tamanho da fonte da duração em dispositivos móveis */
+        font-size: 1rem;
     }
 }
 
@@ -343,7 +342,7 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap; /* Isso permite que as colunas se reorganizem quando o espaço for insuficiente */
+    flex-wrap: wrap; 
 }
 
 .experience-column {
@@ -351,7 +350,7 @@ header {
 }
 
 .experience-item {
-    margin-bottom: 20px;/* Espaçamento entre os itens de habilidade */
+    margin-bottom: 20px;
 }
 
 .experience-item h4 {
@@ -367,24 +366,24 @@ header {
 
 /* ------ EDUCATION ------- */
 .experience-list {
-    list-style-type: none;  /* Remove os bullets */
-    padding: 0;             /* Remove o padding, caso haja algum espaço */
-    margin: 0;              /* Remove a margem, se necessário */
+    list-style-type: none;  
+    padding: 0;            
+    margin: 0;             
 }
 
 .contact-info .experience-list {
-    margin-top: 25px;  /* Ajuste o valor conforme necessário */
+    margin-top: 25px; 
 }
 
 /* ------RESPONSIVE MOBILE/TABLE------- */
 @media (max-width: 768px) {
     .contact-details {
-        flex-direction: column;/* Coloca as colunas em uma coluna quando a tela for pequena */
+        flex-direction: column;
         gap: 20px;
     }
 
     .experience-columns {
-        flex-direction: column;/* Empilha as colunas verticalmente em telas menores */
+        flex-direction: column;
     }
 
     .experience-column {
@@ -419,34 +418,34 @@ header {
 @media (max-width: 768px) {
     .contact-info,
     .experience-section {
-        padding: 0px 20px; /* Reduz o padding lateral para 20px em telas menores */
+        padding: 0px 20px;
     }
 }
 
 @media (max-width: 480px) {
     .contact-info,
     .experience-section {
-        padding: 0px 16px; /* Reduz ainda mais o padding lateral para 10px em telas muito pequenas */
+        padding: 0px 16px; 
     }
 }
 
     .contact-info,
     .experience-section {
-        padding: 0 30px; /* Ajuste para 30px nas laterais em telas menores que 768px */
+        padding: 0 30px;
     }
 }
 
 @media (max-width: 480px) {
     .contact-info,
     .experience-section {
-        padding: 0 16px; /* Ajuste para 15px nas laterais em telas menores que 480px */
+        padding: 0 16px; 
     }
 }
 
 @media (max-width: 768px) {
     .contact-info h1 {
-        font-size: 2rem; /* Reduz o tamanho da fonte para telas menores */
-        white-space: nowrap; /* Garante que o texto não quebre */
+        font-size: 2rem; 
+        white-space: nowrap; 
     }
 }
 
@@ -506,9 +505,6 @@ header {
         font-size: 16px;
     }
 }
-
-
-
 
 /* ----- ICONS ------- */
     .icon {

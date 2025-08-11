@@ -20,7 +20,7 @@ h2, h3{
 
 ul li {
     margin-bottom: 16px;
-     max-width: 60ch; 
+    max-width: 60ch; 
 }
 
 ul {
@@ -88,22 +88,20 @@ main {
     font-size: 1.125rem;
     z-index: 9999;
     text-decoration: none;
-    opacity: 0; /* Invisível inicialmente */
-    pointer-events: none; /* Desabilita a interação com o mouse */
+    opacity: 0;
+    pointer-events: none; 
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Torna o link visível quando em foco pelo teclado */
 .skip-link:focus-visible {
-    opacity: 1; /* Torna o link visível ao focar com o teclado */
+    opacity: 1; 
     background-color: #fd0;
     color: #0b0c0c;
     outline: 3px solid rgba(0, 0, 0, 0);
     box-shadow: 0 -2px 4px #fd0, 0 4px 6px #0b0c0c;
-    pointer-events: auto; /* Habilita interação com o teclado quando visível */
+    pointer-events: auto;
 }
 
-/* Desabilita a interação com o mouse enquanto não estiver em foco via teclado */
 .skip-link:not(:focus-visible) {
     opacity: 0;
 }
@@ -111,17 +109,17 @@ main {
 /* ----HEADER---- */
 header {
     position: relative;
-    top: 0;/* Garante que o header fique no topo */
+    top: 0;
     left: 0;
-    width: 100%;/* O header vai ocupar toda a largura da tela */
-    background-color: #333;/* Cor de fundo */
+    width: 100%;
+    background-color: #333;
     color: white;
     padding: 20px 0;
-    z-index: 1000;/* Garante que o header fique sobre outros conteúdos */
+    z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;/* Adapta o conteúdo no header */
-    padding-left: 50px;/* Ajuste do espaço interno */
+    justify-content: space-between;
+    padding-left: 50px;
 }
 
 .profile-name {
@@ -452,7 +450,6 @@ header {
     }
 }
 
-    /* -----BACK TO TOP------- */
 /* -----BACK TO TOP------- */
 .back-to-top-container {
     position: fixed;
@@ -461,37 +458,37 @@ header {
     transform: translateX(-50%);
     padding: 10px;
     text-align: center;
-    opacity: 0; /* Inicialmente invisível */
+    opacity: 0; 
     transition: opacity 0.3s ease-in-out;
-    visibility: hidden; /* Esconde o botão inicialmente */
-    z-index: 9999; /* Garante que o botão fique sobre outros conteúdos */
+    visibility: hidden; 
+    z-index: 9999; 
 }
 
 .back-to-top-container.show {
     opacity: 1;
-    visibility: visible; /* Torna o botão visível */
+    visibility: visible; 
 }
 
 .back-to-top-link {
-    color: #1d70b8; /* Cor do link */
-    font-size: 18px; /* Tamanho maior da fonte */
+    color: #1d70b8; 
+    font-size: 1.125rem; 
     font-weight: normal;
     transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-flex; /* Flexbox para alinhar o texto e a seta */
-    align-items: center; /* Centraliza a seta verticalmente */
+    display: inline-flex;
+    align-items: center;
 }
 
 .back-to-top-link:hover,
 .back-to-top-link:focus {
     color: #0c4a75;
-    transform: translateY(-3px); /* Levanta o botão quando passa o mouse */
+    transform: translateY(-3px); 
 }
 
 .back-to-top-link svg {
-    margin-right: 8px; /* Espaçamento entre a seta e o texto */
-    fill: currentColor; /* A cor do SVG será a mesma do texto */
-    width: 24px; /* Tamanho maior da seta */
-    height: 24px; /* Tamanho maior da seta */
+    margin-right: 8px; 
+    fill: currentColor; 
+    width: 24px; 
+    height: 24px;
 }
 
 #topo {
@@ -502,11 +499,11 @@ header {
 /* Responsividade */
 @media (max-width: 480px) {
     .back-to-top-container {
-        bottom: 20px; /* Ajusta a posição do botão em telas menores */
+        bottom: 20px; 
     }
 
     .back-to-top-link {
-        font-size: 16px; /* Ajusta o tamanho da fonte do link para telas menores */
+        font-size: 16px;
     }
 }
 
@@ -516,34 +513,33 @@ header {
 /* ----- ICONS ------- */
     .icon {
         margin-right: 12px;
-        /* Espaço entre o ícone e o texto */
     }
 
     .icon svg {
-        width: 32px;/* Tamanho do ícone */
-        height: 32px;/* Tamanho do ícone */
-        fill: #fd0;/* Cor amarela para os ícones */
-        stroke: #fd0;/* Borda amarela */
+        width: 32px;
+        height: 32px;
+        fill: #fd0;
+        stroke: #fd0;
     }
 
 /* SKILLS - LISTAS */
 .experience-columns {
-    display: flex; /* Ativa o layout flex */
-    flex-wrap: wrap; /* Permite que as colunas quebrem para a linha seguinte, se necessário */
-    gap: 20px; /* Espaço entre as colunas */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
   }
   
   .experience-column {
-    flex: 1 1 calc(50% - 20px); /* Garante que cada coluna ocupe metade do espaço, com um gap de 20px entre elas */
-    margin-bottom: 20px; /* Espaço entre as seções de conteúdo */
+    flex: 1 1 calc(50% - 20px); 
+    margin-bottom: 20px; 
   }
   
   .tools-list {
-    list-style-type: none; /* Remove os bullets */
+    list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens se ajustem à linha */
+    flex-wrap: wrap; 
   }
   
   .tools-list li {

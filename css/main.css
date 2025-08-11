@@ -125,6 +125,11 @@ header {
     margin-left: 0.625rem;
 }
 
+.profile-img{
+    height: 124px;
+    width: 124px;
+}
+
 /* Torna o dl semelhante a ul visualmente */
 .contact-list {
   margin-left: 0 !important;

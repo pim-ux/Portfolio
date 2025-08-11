@@ -113,7 +113,7 @@ header {
 
 .last-updated {
     text-align: right;
-    margin-top: 5rem; /* aumenta o espaçamento do topo */
+    margin-top: 1rem; 
     margin-bottom: 2rem;
     color: #666;
     font-size: 0.9rem;

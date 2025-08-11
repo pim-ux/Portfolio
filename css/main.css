@@ -1,104 +1,94 @@
-html {
-  font-size: 100%;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1 {
+h1,
+h2,
+h3 {
+    margin-bottom: 0.9375rem;
     color: #333;
+}
+
+h1 {
     font-size: 3rem;
 }
 
-h2, h3{
-    color: #333;
-}
-
-
 ul li {
-    margin-bottom: 16px;
-    max-width: 60ch; 
+    margin-bottom: 1rem;
+    max-width: 60ch;
 }
 
 ul {
     list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-left: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+span {
+    display: block;
+    max-width: 100ch;
+    word-wrap: break-word;
 }
 
 body {
     font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-    background-color: #fff;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-/* Foco nos links */
 a {
-    text-decoration: none;
-    border-bottom: 2px solid #1d70b8; 
-    padding-bottom: 1px;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-skip: none;
 }
 
 a:focus,
 a:active {
     background-color: #fd0;
     color: #0b0c0c;
-    outline: 3px solid
+    text-decoration: underline;
+    outline: 0.1875rem solid;
 }
 
 main {
-    padding-bottom: 80px;
+    padding-bottom: 5rem;
 }
 
-/* Layout do main */
 .layout {
     max-width: 100%;
-    margin: 0px auto;
-    padding: 20px;
+    margin: 2.5rem auto;
+    padding: 1.25rem;
 }
 
-/* DATE UPDATE */
-.last-updated {
-  font-size: 1rem;
-  color: #666;
-  text-align: right; 
-  width: 100%;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-
-
-/* ----SKIPLINK----- */
 .skip-link {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 44px;
+    height: 2.75rem;
     background-color: #f1c232;
     color: #000;
     text-align: center;
-    line-height: 44px;
+    line-height: 2.75rem;
     font-size: 1.125rem;
     z-index: 9999;
     text-decoration: none;
     opacity: 0;
-    pointer-events: none; 
+    pointer-events: none;
     transition: opacity 0.3s ease-in-out;
 }
 
 .skip-link:focus-visible {
-    opacity: 1; 
+    opacity: 1;
     background-color: #fd0;
     color: #0b0c0c;
-    outline: 3px solid rgba(0, 0, 0, 0);
-    box-shadow: 0 -2px 4px #fd0, 0 4px 6px #0b0c0c;
+    outline: 0.1875rem solid rgba(0, 0, 0, 0);
+    box-shadow: 0 -0.125rem 0.25rem #fd0, 0 0.25rem 0.375rem #0b0c0c;
     pointer-events: auto;
 }
 
@@ -106,76 +96,52 @@ main {
     opacity: 0;
 }
 
-/* ----HEADER---- */
 header {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #333;
     color: white;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 50px;
+    padding-left: 3.125rem;
 }
 
 .profile-name {
     font-size: 1rem;
     color: #fff;
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
-
-/* ----ICONS TITLES---- */
-.bio-section {
-    text-align: left;
-}
-
-.bio-header {
-    display: flex;
-    align-items: center; 
-    gap: 10px; 
-    margin-bottom: 20px;  
-}
-
-.bio-header h2 {
-    font-size: 1.25rem;
-    margin: 0; 
-}
-
-.bio-header svg {
-    width: 32px;
-    height: 32px;
-}
-
-/* ----CONTACT INFO---- */
 
 .contact-details>ul {
     margin-left: 0 !important;
     margin-bottom: 0 !important;
+}
 
 .contact-info,
 .experience-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0px 40px 0px 40px;
+    max-width: 50rem;
+    margin: 2.5rem auto;
+    padding: 2.5rem;
+    background-color: #fff;
 }
 
 .contact-info img {
-    width: 124px;/* Tamanho fixo de 124px */
-    height: 124px;
-    object-fit: cover; 
+    width: 7.75rem;
+    height: 7.75rem;
+    object-fit: cover;
 }
 
 .contact-info h1 {
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 .contact-info .contact-role {
     margin-top: 0;
-  
 }
 
 .contact-details-section {
@@ -184,26 +150,18 @@ header {
     align-items: flex-start;
 }
 
-/* ----BIO---- */
+.focused-heading {
+    margin-top: 1.25rem;
+}
 
 .bio-section {
     text-align: left;
 }
 
-.focused-heading {
-    margin-top: 40px; /* Ajuste o valor conforme necessário */
-  }
-
-.limited-text {
-    display: block;
-    max-width: 70ch; 
-    word-wrap: break-word; 
-}
-
 .contact-item {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 }
 
 .contact-label {
@@ -212,47 +170,38 @@ header {
 
 .contact-link {
     color: #1d70b8;
+    text-decoration: underline;
+    text-decoration-skip: none;
+    text-decoration-thickness: 2px;
 }
 
 .contact-link:hover,
 .contact-link:focus {
+    text-decoration: underline;
     color: #0c4a75;
 }
 
 .contact-title {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .contact-role {
-    display: block; 
     font-size: 1.2rem;
     color: #555;
     font-weight: normal;
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin-bottom: 6.25rem;
+    margin-top: 0.625rem;
 }
 
-/* Detalhes de contato em 2 colunas */
 .contact-details {
     display: flex;
-    justify-content: flex-start;/* Alinha as colunas à esquerda */
-    gap: 100px;/* Espaçamento entre as colunas */
-}
-
-.contact-item {
-    display: flex;/* Faz com que os span fiquem na mesma linha */
-    align-items: center;/* Alinha verticalmente no centro */
-    gap: 10px;/* Espaçamento entre os elementos span */
+    justify-content: flex-start;
+    gap: 6.25rem;
 }
 
 .contact-header {
-    margin-bottom: 20px;/* Espaçamento entre o grupo (título + cargo) e os elementos abaixo */
-}
-
-.contact-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 1.25rem;
 }
 
 .contact-location,
@@ -260,89 +209,50 @@ header {
     font-size: 1rem;
 }
 
-.contact-label {
-    font-weight: bold;
+.job-experience ul {
+    margin-bottom: 3.125rem;
+    margin-top: 1.5625rem;
 }
-
-.contact-link {
-    color: #1d70b8;
-}
-
-.contact-link:hover,
-.contact-link:focus {
-    color: #0c4a75;
-}
-
-/* EXPERIENCE */
 
 .job-experience {
-    margin-bottom: 50px;
-    word-wrap: break-word;
-    max-width: 100%;
-}
-
-/* Para as listas de experiência, manter as margens e padding padrão */
-.job-experience ul {
-    margin-bottom: 50px;
-    margin-top: 25px;
-    list-style-type: disc;
-}
-
-/* Ajustes no título da vaga e a duração */
-.job-header {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px; 
-}
-
-.job-title {
-    font-size: 1.25rem;
-    word-wrap: break-word;
+    margin-bottom: 3.125rem;
 }
 
 .job-duration {
-    font-size: 1rem;
-    color: #767676;
     margin-top: 0;
-    word-break: break-word;
+    color: rgba(155, 155, 155, 1);
 }
 
-@media (max-width: 768px) {
-    .job-experience {
-        padding: 0 15px; 
-    }
-
-    .job-header {
-        flex-direction: column; 
-        align-items: flex-start; 
-    }
-
-    .job-title {
-        font-size: 1.25rem; 
-    }
-
-    .job-duration {
-        font-size: 1rem;
-    }
+.bio-header {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
 }
 
-.job-experience ul li {
-    word-wrap: break-word;
-    max-width: 100%;
+.bio-header h2 {
+    font-size: 2rem;
+    margin: 0;
 }
 
-/* -----SKILLS----- */
+.bio-header svg {
+    width: 2rem;
+    height: auto;
+}
+
+.titles {
+    margin-bottom: 6.25rem;
+}
 
 .experience-section {
-    padding: 0 40px 0 40px;
+    padding: 2.5rem;
     text-align: left;
 }
 
 .experience-columns {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap; 
+    gap: 1.25rem;
+    flex-wrap: wrap;
 }
 
 .experience-column {
@@ -350,13 +260,13 @@ header {
 }
 
 .experience-item {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .experience-item h4 {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 .experience-item p {
@@ -364,22 +274,20 @@ header {
     line-height: 1.6;
 }
 
-/* ------ EDUCATION ------- */
 .experience-list {
-    list-style-type: none;  
-    padding: 0;            
-    margin: 0;             
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .contact-info .experience-list {
-    margin-top: 25px; 
+    margin-top: 2.5rem;
 }
 
-/* ------RESPONSIVE MOBILE/TABLE------- */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .contact-details {
         flex-direction: column;
-        gap: 20px;
+        gap: 1.25rem;
     }
 
     .experience-columns {
@@ -391,7 +299,7 @@ header {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
     .contact-details > ul {
         margin-left: 0 !important;
         margin-bottom: 0 !important;
@@ -403,146 +311,99 @@ header {
 
     .contact-item a {
         display: block;
-        margin-top: 5px;
+        margin-top: 0.3125rem;
     }
 
     .back-to-top-container {
-        bottom: 40px;
+        bottom: 2.5rem;
     }
 
     .back-to-top-link {
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 768px) {
-    .contact-info,
-    .experience-section {
-        padding: 0px 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-info,
-    .experience-section {
-        padding: 0px 16px; 
-    }
-}
-
-    .contact-info,
-    .experience-section {
-        padding: 0 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .contact-info,
-    .experience-section {
-        padding: 0 16px; 
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-info h1 {
-        font-size: 2rem; 
-        white-space: nowrap; 
-    }
-}
-
-/* -----BACK TO TOP------- */
 .back-to-top-container {
     position: fixed;
-    bottom: 40px;
+    bottom: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px;
+    padding: 0.625rem;
     text-align: center;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    visibility: hidden; 
-    z-index: 9999; 
+    visibility: hidden;
 }
 
 .back-to-top-container.show {
     opacity: 1;
-    visibility: visible; 
+    visibility: visible;
 }
 
 .back-to-top-link {
-    color: #1d70b8; 
-    font-size: 1.125rem; 
+    color: #1d70b8;
+    font-size: 1.125rem;
     font-weight: normal;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-flex;
     align-items: center;
+    text-decoration-skip: none;
 }
 
 .back-to-top-link:hover,
 .back-to-top-link:focus {
     color: #0c4a75;
-    transform: translateY(-3px); 
+    text-decoration: underline;
+    transform: translateY(-0.1875rem);
+    text-decoration-skip: none;
 }
 
 .back-to-top-link svg {
-    margin-right: 8px; 
-    fill: currentColor; 
-    width: 24px; 
-    height: 24px;
+    margin-right: 0.5rem;
+    fill: currentColor;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 #topo {
     display: block;
-    height: 1px;
+    height: 0.0625rem;
 }
 
-/* Responsividade */
-@media (max-width: 480px) {
-    .back-to-top-container {
-        bottom: 20px; 
-    }
-
-    .back-to-top-link {
-        font-size: 16px;
-    }
+.icon {
+    margin-right: 0.75rem;
 }
 
-/* ----- ICONS ------- */
-    .icon {
-        margin-right: 12px;
-    }
+.icon svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #fd0;
+    stroke: #fd0;
+}
 
-    .icon svg {
-        width: 32px;
-        height: 32px;
-        fill: #fd0;
-        stroke: #fd0;
-    }
-
-/* SKILLS - LISTAS */
 .experience-columns {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 20px; 
-  }
-  
-  .experience-column {
-    flex: 1 1 calc(50% - 20px); 
-    margin-bottom: 20px; 
-  }
-  
-  .tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.experience-column {
+    flex: 1 1 calc(50% - 1.25rem);
+    margin-bottom: 1.25rem;
+}
+
+.tools-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; 
-  }
-  
-  .tools-list li {
-    margin-right: 8px;
-    margin-bottom: 8px;
-    white-space: nowrap;
-  }
+    flex-wrap: wrap;
+}
+
+.tools-list li {
+    margin-right: 0.5rem;
+    margin-bottom:
+
 
 
   

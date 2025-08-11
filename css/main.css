@@ -76,9 +76,9 @@ main {
     text-align: center;
     line-height: 2.75rem;
     font-size: 1.125rem;
-    z-index: 9999;
+     z-index: 1000;
     text-decoration: none;
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
 }
 
@@ -92,13 +92,13 @@ main {
 
 header {
     position: fixed;
-    top: 0;
+    top: 2.75rem;
     left: 0;
     width: 100%;
     background-color: #333;
     color: white;
     padding: 1.25rem 0;
-    z-index: 1000;
+    z-index: 2000;
     display: flex;
     align-items: center;
     justify-content: space-between;

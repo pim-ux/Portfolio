@@ -11,150 +11,218 @@
   <script src="js/main.js" defer></script>
 </head>
 
-<body id="top">
+<body>
 
-  <!-- Skiplink -->
-  <a href="#main" class="skip-link">Skip to main content</a>
+  <!--
+    SKIP LINK — always visible at the top (yellow bar).
+    Header sits below it. They never overlap.
+  -->
+  <a class="skip-link" href="#about">Skip to main content</a>
 
-  <!-- Header  -->
-  <header class="site-header">
-    <div class="header-inner container">
-      <!-- Ícone decorativo: alt vazio chega -->
-      <img class="brand-icon"
-           src="img/FOTO_-_PM-Photoroom_(1).webp"
-           alt=""
-           width="20" height="20">
-
-      <nav aria-label="Primary">
-        <ul>
+  <!--
+    HEADER — top: var(--skip-h), directly below the skip link.
+  -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#top" class="header-logo" aria-label="Patrícia Magrinho — back to top">
+        <svg aria-hidden="true" focusable="false" width="36" height="44" viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Fingerprint whorl rings, clipped to bottom half to suggest a fingertip -->
+          <!-- Ring 1 — outermost -->
+          <path d="M 2 38 C 2 20 8 8 18 6 C 28 4 34 16 34 28 C 34 36 30 42 24 44" stroke="#F5C842" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.5"/>
+          <!-- Ring 2 -->
+          <path d="M 5 38 C 5 23 10 12 18 10 C 26 8 31 19 31 30 C 31 37 28 42 23 44" stroke="#F5C842" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.65"/>
+          <!-- Ring 3 -->
+          <path d="M 8 38 C 8 25 12 16 18 14 C 24 12 28 21 28 31 C 28 37 26 42 22 44" stroke="#F5C842" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.8"/>
+          <!-- Ring 4 -->
+          <path d="M 11 38 C 11 27 14 20 18 18 C 22 16 25 23 25 32 C 25 37 23 42 21 44" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.9"/>
+          <!-- Ring 5 — innermost -->
+          <path d="M 14 36 C 14 30 16 24 18 22 C 20 20 22 25 22 32 C 22 37 21 41 20 44" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <!-- PM initials carved at the core -->
+          <text x="18" y="35" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="10" font-weight="700" fill="#F5C842" letter-spacing="0.5">PM</text>
+          <!-- Flat base line suggesting a fingertip edge -->
+          <line x1="0" y1="44" x2="36" y2="44" stroke="#F5C842" stroke-width="1" opacity="0.3"/>
+        </svg>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul role="list">
           <li><a href="#about">About</a></li>
-          <li><a href="#cta">Resume</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="resume.html">Résumé</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Nome  -->
-  <div class="brand-block container">
-    <a class="logotype" href="#top">
-      <h1 class="logotype-name">Patrícia Magrinho</h1>
-      <p class="logotype-role">UX, Accessibility Specialist</p>
-    </a>
-  </div>
-
-  
   <main id="main" tabindex="-1">
-    <section id="about" class="hero container" aria-labelledby="about-title">
-      <div class="hero-text">
-        <h2 id="about-title" class="sr-only">About</h2>
 
-        <p>
-          My career is defined by a commitment to usability, accessibility, inclusive design,
-          and scalable systems that drive high-impact products while setting industry benchmarks
-          for quality and excellence.
-        </p>
+    <section id="top" class="hero" aria-labelledby="hero-name-label">
+      <div class="container hero-inner">
+        <div class="hero-text">
 
-        <p class="focus-title">Current Focus</p>
-        <ul>
-          <li>Designing accessible digital services</li>
-          <li>Conducting accessibility audits (WCAG 2.1/2.2)</li>
-        </ul>
-      </div>
-
-      <div class="portrait-wrap">
-        <img class="portrait"
-             src="img/FOTO_-_PM-Photoroom_(1).webp"
-             alt="Portrait of Patrícia Magrinho"
-             width="200" height="200">
-      </div>
-    </section>
- <!-- STRENGTHS -->
-    <section class="strengths container" aria-labelledby="strengths-title">
-      <h2 id="strengths-title" class="sr-only">Strengths</h2>
-
-      <ul class="strengths-grid" >
-        <li class="strength" >
-          <div class="strength-badge" aria-hidden="true">
-            <svg class="badge-bg" viewBox="0 0 64 64"><path d="M32 4c-9.9 0-18 8.1-18 18s8.1 18 18 18 18-8.1 18-18S41.9 4 32 4Z"/></svg>
-            <svg class="badge-glyph" viewBox="0 0 24 24"><path d="M9 18h6v1a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-1Zm3-16a7 7 0 0 0-4 12.9V16h8v-1.1A7 7 0 0 0 12 2Z"/></svg>
+          <!--
+            NAME REVEAL
+            role="img" + aria-label → screen readers announce "Patrícia Magrinho"
+            h1 is aria-hidden so it's not announced a second time
+            tabindex="0" → keyboard focusable
+            Enter/Space → toggle .expanded
+          -->
+          <div
+            class="hero-name-group"
+            id="hero-name-label"
+            role="img"
+            aria-label="Patrícia Magrinho"
+            tabindex="0"
+            onkeydown="if(event.key==='Enter'||event.key===' '){this.classList.toggle('expanded');event.preventDefault();}"
+          >
+            <div class="hero-name-wrapper">
+              <h1 aria-hidden="true">Patrícia Magrinho</h1>
+            </div>
           </div>
-          <h3>Expert Design Craft</h3>
-          <p>I have a full range of interaction, visual, and product-thinking skills. I’m comfortable shifting between vision definition, framework building, and hands-on pixel work.</p>
-        </li>
 
-        <li class="strength" >
-          <div class="strength-badge" aria-hidden="true">
-            <svg class="badge-bg" viewBox="0 0 64 64"><path d="M32 4c-9.9 0-18 8.1-18 18s8.1 18 18 18 18-8.1 18-18S41.9 4 32 4Z"/></svg>
-            <svg class="badge-glyph" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4Zm4 5 2 2-2 2m6-4 2 2-2 2M8 8l2-2M14 8l2-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="hero-role" aria-hidden="true">UX, Accessibility Specialist</span>
+
+          <p class="name-hint" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+            hover or focus to reveal
+          </p>
+
+          <p class="hero-bio">
+            I make digital products <strong>accessible and inclusive</strong> — from accessibility audits and WCAG compliance to designing scalable systems that work for everyone.
+          </p>
+
+          <div class="hero-actions">
+            <a href="resume.html" class="btn btn-primary" target="_blank" rel="noopener">
+              View résumé
+              <span class="sr-only">(opens in a new tab)</span>
+            </a>
           </div>
-          <h3>Strategic Problem-Solving</h3>
-          <p>I synthesize business needs, user research, and technical constraints to make strategic design decisions and turn insights into meaningful results.</p>
-        </li>
+        </div>
 
-        <li class="strength" >
-          <div class="strength-badge" aria-hidden="true">
-            <svg class="badge-bg" viewBox="0 0 64 64"><path d="M32 4c-9.9 0-18 8.1-18 18s8.1 18 18 18 18-8.1 18-18S41.9 4 32 4Z"/></svg>
-            <svg class="badge-glyph" viewBox="0 0 24 24"><path d="M12 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm-8 6h16m-8 2v8m-6-8c2 0 4 .5 6 .5s4-.5 6-.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <div class="hero-portrait" aria-hidden="true">
+          <div class="portrait-ring">
+            <div class="portrait-initials">PM</div>
           </div>
-          <h3>Accessibility &amp; Inclusive Design</h3>
-          <p>I embed accessibility and inclusive design at scale, ensuring products are compliant and usable.</p>
-        </li>
-
-        <li class="strength" >
-          <div class="strength-badge" aria-hidden="true">
-            <svg class="badge-bg" viewBox="0 0 64 64"><path d="M32 4c-9.9 0-18 8.1-18 18s8.1 18 18 18 18-8.1 18-18S41.9 4 32 4Z"/></svg>
-            <svg class="badge-glyph" viewBox="0 0 24 24"><path d="M4 5h16v10H8l-4 4V5Z"/></svg>
-          </div>
-          <h3>Communication &amp; Influence</h3>
-          <p>I build strong relationships across product teams, lead discussions and workshops, and scope realistic deliverables with partners.</p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="cta" class="cta container" aria-labelledby="cta-title">
-      <div class="cta-inner">
-        <h2 id="cta-title">Want to know more?</h2>
-        <p>Check out my resume for a complete look at my experience, skillset, education, and more!</p>
-
-        <p>
-          <a class="btn-cta"
-             href="Resume.html"
-             target="_blank"
-             rel="noopener"
-             aria-label="Open my resume (opens in a new tab)">
-            My Resume
-          </a>
-        </p>
+        </div>
       </div>
     </section>
 
-    <div class="footer-divider" aria-hidden="true"></div>
+    <section id="about" class="section-about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>My career is built on a commitment to usability, accessibility, and inclusive design. I work with product teams to ensure digital services are accessible, compliant, and genuinely work for people — including those with disabilities, cognitive differences, or situational impairments.</p>
+            <p>I believe good accessibility <em>is</em> good design. Not a checklist — a practice.</p>
+          </div>
+          <div class="about-focus">
+            <h3>Current focus</h3>
+            <ul role="list" class="focus-list">
+              <li>
+                <span class="focus-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                </span>
+                Designing accessible digital services
+              </li>
+              <li>
+                <span class="focus-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                </span>
+                Accessibility audits (WCAG 2.1/2.2)
+              </li>
+              <li>
+                <span class="focus-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                </span>
+                User sessions with people with disabilities
+              </li>
+              <li>
+                <span class="focus-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </span>
+                Accessible design system components
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section-experience" aria-labelledby="exp-title">
+      <div class="container">
+        <h2 id="exp-title" class="section-title">Experience</h2>
+        <ol class="timeline" role="list">
+
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>UX &amp; Accessibility Specialist</h3>
+                <span class="timeline-org">AMA / Tangível</span>
+              </div>
+              <p class="timeline-meta">
+                <time datetime="2021-05">May 2021</time> — Present · Lisbon
+              </p>
+              <ul role="list" class="timeline-list">
+                <li>Integrating accessibility throughout the full product lifecycle</li>
+                <li>Conducting audits and providing remediation recommendations (WCAG 2.1/2.2)</li>
+                <li>Facilitating user research sessions with people with disabilities</li>
+                <li>Building accessible, scalable components for design systems</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>UX Designer</h3>
+                <span class="timeline-org">Segurança Social</span>
+              </div>
+              <p class="timeline-meta">
+                <time datetime="2019-02">Feb 2019</time> — <time datetime="2021-03">Mar 2021</time> · Lisbon
+              </p>
+              <ul role="list" class="timeline-list">
+                <li>Designing flows, information architecture, wireframes, and prototypes</li>
+                <li>Collaborating closely with engineering teams</li>
+                <li>Conducting usability tests and concept validation</li>
+              </ul>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
 
   </main>
-  
-    <footer class="site-footer container">
-      <div>© 2026 All rights reserved.</div>
 
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© 2026 Patrícia Magrinho. All rights reserved.</p>
       <nav class="social" aria-label="Social links">
         <a class="social-link"
-           href="https://www.linkedin.com/in/SEU-USERNAME"
-           target="_blank"
-           rel="noopener"
-           aria-label="LinkedIn">
+           href="https://www.linkedin.com/in/pimagrinho/"
+           target="_blank" rel="noopener"
+           aria-label="LinkedIn (opens in a new tab)">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-            <path fill="currentColor"
-              d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.5h4.9V24H.5zM9 8.5h4.7v2.1h.1c.7-1.3 2.4-2.6 4.9-2.6 5.2 0 6.2 3.4 6.2 7.7V24h-4.9v-6.8c0-1.6 0-3.7-2.3-3.7-2.3 0-2.6 1.8-2.6 3.6V24H9z"/>
+            <path fill="currentColor" d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.5h4.9V24H.5zM9 8.5h4.7v2.1h.1c.7-1.3 2.4-2.6 4.9-2.6 5.2 0 6.2 3.4 6.2 7.7V24h-4.9v-6.8c0-1.6 0-3.7-2.3-3.7-2.3 0-2.6 1.8-2.6 3.6V24H9z"/>
           </svg>
         </a>
-
-        <a class="social-link" href="mailto:you@example.com" aria-label="Email">
+        <a class="social-link"
+           href="mailto:pim.uxdesigner@gmail.com"
+           aria-label="Send email to Patrícia">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
-            <path fill="currentColor"
-              d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
+            <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/>
           </svg>
         </a>
       </nav>
-    </footer>
+    </div>
+  </footer>
+
 
 </body>
 </html>
+
